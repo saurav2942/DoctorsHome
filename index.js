@@ -1,10 +1,11 @@
 import React, { lazy, Suspense } from "react";
 import ReactDom from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Shimmer from "./src/components/Shimmer";
 import Home from "./src/components/Home";
 import Services from "./src/components/Services";
 import About from "./src/components/About";
+import Shimmer from "./src/components/Shimmer";
+import MainShimmere from "./src/components/MainShimmere";
 
 const App = lazy(() => import("./src/components/App"));
 
@@ -13,14 +14,14 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: (
       <Suspense fallback={<Shimmer />}>
-        <App/>
+        <App />
       </Suspense>
     ),
     children: [
       {
         path: "/",
         element: (
-          <Suspense fallback={<Shimmer />}>
+          <Suspense fallback={<MainShimmere />}>
             <Home />
           </Suspense>
         ),
@@ -28,16 +29,16 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: (
-          <Suspense fallback={<Shimmer />}>
-            <About/>
+          <Suspense fallback={<MainShimmere />}>
+            <About />
           </Suspense>
         ),
       },
       {
         path: "/services",
         element: (
-          <Suspense fallback={<Shimmer />}>
-            <Services/>
+          <Suspense fallback={<MainShimmere />}>
+            <Services />
           </Suspense>
         ),
       },
