@@ -13,7 +13,7 @@ const image = new URL(
 );
 const Home = () => {
   return (
-    <div className="w-screen h-auto flex flex-col gap-5 mb-[5%] relative">
+    <div className="w-screen h-auto flex flex-col gap-5 mb-[5%] relative z-0">
       {/* {first compnent} */}
       <div className="w-full h-[30%] flex relative">
         <div

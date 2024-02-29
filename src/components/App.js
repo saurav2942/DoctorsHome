@@ -6,7 +6,7 @@ import Header from "./Header";
 const App = () => {
   return (
     <>
-      <div className="m-0 p-0 box-border">
+      <div className="m-0 p-0 box-border z-0">
         <Header />
         <Outlet />
         <Footer />
